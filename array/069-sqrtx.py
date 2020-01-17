@@ -29,7 +29,9 @@ class Solution:
         right = x // 2
 
         while left < right:
-            # 看了大佬的方法，中位数这里要取右。。
+            # 有一个“+1”是为了避免最后left、right只有2个元素时陷入死循环
+            # 看了大佬的方法，中位数取法有一种“右移的方法”。。
+            # mid = (left + right + 1) >> 1
             mid = (left + right + 1) // 2
             square = mid * mid
 
